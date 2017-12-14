@@ -9,17 +9,8 @@ import(
 	"net/url"
 )
 
-//func jadwalHandler(w http.ResponseWriter, r *http.Request) {
-//	myjadwal := JadwalRuangan {
-//	Jadwal{"7601", "Labtek V", "07:00 - 18:00", "Senin - Jumat", "Pak Y", "081234567899\n"},
-//	Jadwal{"9131", "GKU Barat", "07:00 - 18:00", "Senin - Jumat", "Pak Y", " 081298765432"},
-//	}
-
-//	json.NewEncoder(w).Encode(myjadwal)
-//}
-
 func GetAllRuangan(w http.ResponseWriter, r *http.Request) {
-        db, err := sql.Open("mysql", "root:@tcp(127.0.0.1:3306)/jadwal")
+        db, err := sql.Open("mysql", "root:@tcp(167.205.67.251:3306)/data_ruangan_026")
         if err != nil {
                 log.Fatal(err)
         }
@@ -46,7 +37,7 @@ func GetAllRuangan(w http.ResponseWriter, r *http.Request) {
 func GetRuangan(w http.ResponseWriter, r *http.Request, n string){
 	
 
-	db, err := sql.Open("mysql","root:@tcp(127.0.0.1:3306)/jadwal")
+	db, err := sql.Open("mysql","root:@tcp(167.205.67.251:3306)/data_ruangan_026")
 
 	if err!= nil{
 		log.Fatal(err)
@@ -75,7 +66,7 @@ func GetRuangan(w http.ResponseWriter, r *http.Request, n string){
 func GetGedung(w http.ResponseWriter, r *http.Request, g string){
 	
 
-	db, err := sql.Open("mysql","root:@tcp(127.0.0.1:3306)/jadwal")
+	db, err := sql.Open("mysql","root:@tcp(167.205.67.251:3306)/data_ruangan_026")
 
 	if err!= nil{
 		log.Fatal(err)
@@ -105,7 +96,7 @@ func GetGedung(w http.ResponseWriter, r *http.Request, g string){
 func GetPj(w http.ResponseWriter, r *http.Request, p string){
 	
 
-	db, err := sql.Open("mysql","root:@tcp(127.0.0.1:3306)/jadwal")
+	db, err := sql.Open("mysql","root:@tcp(167.205.67.251:3306)/data_ruangan_026")
 
 	if err!= nil{
 		log.Fatal(err)

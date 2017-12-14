@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	port:=8080
+	port:=9131
 
 	http.HandleFunc("/ruangan/", func(w http.ResponseWriter, r*http.Request) {
 		switch r.Method {
